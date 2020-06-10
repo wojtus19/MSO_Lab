@@ -2,4 +2,6 @@
     <string name="app_name">MSO_Lab</string>
     <string name="index">172166</string>
     <string name="name">Wojciech Niewiadomski</string>
+    <string name="Window2Button">Okno 2</string>
+    <string name="drawButton">Rysuj</string>
 </resources>
