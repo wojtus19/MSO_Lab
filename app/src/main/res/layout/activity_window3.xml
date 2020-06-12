@@ -6,28 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Window3">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="@string/textview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
+        android:layout_marginTop="368dp"
         android:ems="10"
+        android:hint="@string/EditText3"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="@string/EditText3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
@@ -43,4 +32,13 @@
         app:layout_constraintStart_toEndOf="@+id/editText3"
         app:layout_constraintTop_toTopOf="@+id/editText3"
         app:layout_constraintVertical_bias="0.0" />
+
+
+
+    <ListView
+        android:id="@+id/dbListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </ListView>
 </androidx.constraintlayout.widget.ConstraintLayout>

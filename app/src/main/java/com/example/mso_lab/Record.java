@@ -4,22 +4,22 @@ public class Record {
 
     int id;
     String textRecord;
-    String phone_number;
+    String recordTime;
 
 
     public Record(){
 
     }
 
-    public Record(String textRecord, String phone_number) {
+    public Record(String textRecord, String recordTime) {
         this.textRecord = textRecord;
-        this.phone_number = phone_number;
+        this.recordTime = recordTime;
     }
 
-    public Record(int id, String textRecord, String phone_number) {
+    public Record(int id, String textRecord, String recordTime) {
         this.id = id;
         this.textRecord = textRecord;
-        this.phone_number = phone_number;
+        this.recordTime = recordTime;
     }
 
     public int getId() {
@@ -38,11 +38,11 @@ public class Record {
         this.textRecord = textRecord;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getRecordTime() {
+        return recordTime;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setRecordTime(String phone_number) {
+        this.recordTime = phone_number;
     }
 }
