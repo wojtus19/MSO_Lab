@@ -3,6 +3,7 @@ package com.example.mso_lab;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -36,19 +37,27 @@ public class Window3 extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        final SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
+        @SuppressLint("SimpleDateFormat") final SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
         currentTime = new Date(System.currentTimeMillis());
 
 
         db.addRecord(new Record("test123", formatter.format(currentTime)));
 
         addRecordBtn = (Button) findViewById(R.id.AddRecordBtn);
+        addText = (EditText) findViewById(R.id.editText3);
 
+        addText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addText.setText("");
+
+            }
+        });
 
         addRecordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addText = (EditText) findViewById(R.id.editText3);
+
                 textRecordToAdd = addText.getText().toString();
 
 
@@ -69,7 +78,7 @@ public class Window3 extends AppCompatActivity {
         for (Record c : records){
 
             String log = "ID: " + c.getId() + ", TEXT: " + c.getTextRecord() + ", NUMBER: " + c.getPhone_number() + "\n";
-            text = text + log;
+            text = text.concat(log);
         }
         textView.setText(text);
     }
