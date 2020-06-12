@@ -4,4 +4,8 @@
     <string name="name">Wojciech Niewiadomski</string>
     <string name="Window2Button">Okno 2</string>
     <string name="drawButton">Rysuj</string>
+    <string name="Window3Button">Okno 3</string>
+    <string name="textview">TextView</string>
+    <string name="EditText3">Wpisz tekst</string>
+    <string name="AddRecordBtn">Dodaj Wpis</string>
 </resources>

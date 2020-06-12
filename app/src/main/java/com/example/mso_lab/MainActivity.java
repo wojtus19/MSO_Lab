@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button win2Btn;
+    Button win2Btn, win3Btn;
     String Texthere;
 
     @Override
@@ -27,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Window2.class);
+                startActivityForResult(intent, 1);
+            }
+        });
+
+        win3Btn = (Button)findViewById(R.id.win3Button);
+
+        win3Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Window3.class);
                 startActivityForResult(intent, 1);
             }
         });
