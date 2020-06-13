@@ -4,19 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Window2">
+    tools:context=".Window4">
 
-
-    <Button
-        android:id="@+id/win3Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="568dp"
-        android:text="@string/Window3Button"
-        app:layout_constraintEnd_toStartOf="@+id/win4Button"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/win6Button"
@@ -29,12 +18,12 @@
         app:layout_constraintTop_toTopOf="@+id/win5Button" />
 
     <Button
-        android:id="@+id/win4Button"
+        android:id="@+id/win3Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Window4Button"
+        android:text="@string/Window3Button"
         app:layout_constraintEnd_toStartOf="@+id/win5Button"
-        app:layout_constraintTop_toTopOf="@+id/win3Button" />
+        app:layout_constraintTop_toTopOf="@+id/win2Button" />
 
     <Button
         android:id="@+id/win5Button"
@@ -42,14 +31,18 @@
         android:layout_height="wrap_content"
         android:text="@string/Window5Button"
         app:layout_constraintEnd_toStartOf="@+id/win6Button"
-        app:layout_constraintTop_toTopOf="@+id/win4Button" />
+        app:layout_constraintTop_toTopOf="@+id/win3Button" />
 
     <Button
-        android:id="@+id/drawButton"
+        android:id="@+id/win2Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="504dp"
-        android:text="@string/drawButton"
-        app:layout_constraintStart_toStartOf="@+id/win3Button"
+        android:layout_marginTop="568dp"
+        android:text="@string/Window2Button"
+        app:layout_constraintEnd_toStartOf="@+id/win3Button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

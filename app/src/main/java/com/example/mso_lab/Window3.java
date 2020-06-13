@@ -1,9 +1,12 @@
 package com.example.mso_lab;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,16 +27,18 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 public class Window3 extends AppCompatActivity {
 
+    Button win2Btn, win4Btn, win5Btn, win6Btn;
     Date currentTime;
-    Button addRecordBtn;
+    Button addRecordBtn, listViewBtn;
     String textRecordToAdd;
     EditText addText;
     DatabaseHelper db = new DatabaseHelper(this);
     ListView listView;
+    boolean showList = false;
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -41,14 +46,51 @@ public class Window3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_window3);
 
+        win2Btn = (Button)findViewById(R.id.win2Button);
+        win2Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Window3.this, Window2.class);
+                startActivityForResult(intent, 1);
+            }
+        });
+
+        win4Btn = (Button)findViewById(R.id.win4Button);
+        win4Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Window3.this, Window4.class);
+                startActivityForResult(intent, 1);
+            }
+        });
+
+        win5Btn = (Button)findViewById(R.id.win5Button);
+        win5Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Window3.this, Window5.class);
+                startActivityForResult(intent, 1);
+            }
+        });
+
+        win6Btn = (Button)findViewById(R.id.win6Button);
+        win6Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Window3.this, Window6.class);
+                startActivityForResult(intent, 1);
+            }
+        });
+
+
+
 
         listView= (ListView) findViewById(R.id.dbListView);
+        listViewBtn = (Button) findViewById(R.id.listViewBtn);
+        listView.setVisibility(View.GONE);
 
         @SuppressLint("SimpleDateFormat") final SimpleDateFormat formatter = new SimpleDateFormat("HH:mm dd/MM/yyyy");
         currentTime = new Date(System.currentTimeMillis());
-
-
-        db.addRecord(new Record("test123", formatter.format(currentTime)));
 
 
         addRecordBtn = (Button) findViewById(R.id.AddRecordBtn);
@@ -69,6 +111,22 @@ public class Window3 extends AppCompatActivity {
                 currentTime = new Date(System.currentTimeMillis());
                 db.addRecord(new Record(textRecordToAdd, formatter.format(currentTime)));
                 UpdateView();
+            }
+        });
+
+        listViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!showList){
+                    listView.setVisibility(View.VISIBLE);
+                    listViewBtn.setText("Ukryj tabelę");
+                    showList = true;
+                }
+                else {
+                    listView.setVisibility(View.GONE);
+                    listViewBtn.setText("Wyświetl Tabelę");
+                    showList = false;
+                }
             }
         });
 
@@ -112,5 +170,12 @@ public class Window3 extends AppCompatActivity {
         //@SuppressWarnings("rawtypes") ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_2, arrayList);
         //listView.setAdapter(arrayAdapter);
     }
+
+
+    public void onBackPressed() {
+           Intent intent = new Intent(Window3.this, MainActivity.class);
+           startActivityForResult(intent, 1);
+    }
+
 
 }

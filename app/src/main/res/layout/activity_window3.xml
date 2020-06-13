@@ -6,39 +6,87 @@
     android:layout_height="match_parent"
     tools:context=".Window3">
 
+
+    <Button
+        android:id="@+id/win2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="568dp"
+        android:text="@string/Window2Button"
+        app:layout_constraintEnd_toStartOf="@+id/win4Button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/win6Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="@string/Window6Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/win5Button" />
+
+    <Button
+        android:id="@+id/win4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Window4Button"
+        app:layout_constraintEnd_toStartOf="@+id/win5Button"
+        app:layout_constraintTop_toTopOf="@+id/win2Button" />
+
+    <Button
+        android:id="@+id/win5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Window5Button"
+        app:layout_constraintEnd_toStartOf="@+id/win6Button"
+        app:layout_constraintTop_toTopOf="@+id/win4Button" />
+
+
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="368dp"
+        android:layout_marginTop="376dp"
         android:ems="10"
         android:hint="@string/EditText3"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
+
 
     <Button
         android:id="@+id/AddRecordBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:text="@string/AddRecordBtn"
         app:layout_constraintBottom_toBottomOf="@+id/editText3"
         app:layout_constraintStart_toEndOf="@+id/editText3"
         app:layout_constraintTop_toTopOf="@+id/editText3"
         app:layout_constraintVertical_bias="0.0" />
 
-
-
     <ListView
         android:id="@+id/dbListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-    </ListView>
+        tools:ignore="MissingConstraints"></ListView>
+
+    <Button
+        android:id="@+id/listViewBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/listViewBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

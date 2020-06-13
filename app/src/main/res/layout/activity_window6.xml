@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Window6">
+
+
+    <Button
+        android:id="@+id/win5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="@string/Window5Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/win4Button" />
+
+    <Button
+        android:id="@+id/win3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Window3Button"
+        app:layout_constraintEnd_toStartOf="@+id/win4Button"
+        app:layout_constraintTop_toTopOf="@+id/win2Button" />
+
+    <Button
+        android:id="@+id/win4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Window4Button"
+        app:layout_constraintEnd_toStartOf="@+id/win5Button"
+        app:layout_constraintTop_toTopOf="@+id/win3Button" />
+
+    <Button
+        android:id="@+id/win2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="568dp"
+        android:text="@string/Window2Button"
+        app:layout_constraintEnd_toStartOf="@+id/win3Button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
