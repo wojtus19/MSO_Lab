@@ -7,6 +7,17 @@
     tools:context=".Window6">
 
 
+    <TextView
+        android:id="@+id/win6Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/win6Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/win5Button"
         android:layout_width="wrap_content"

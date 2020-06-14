@@ -12,4 +12,28 @@
     <string name="EditText3">Wpisz tekst</string>
     <string name="AddRecordBtn">Dodaj Wpis</string>
     <string name="listViewBtn">Wyświetl tabelę</string>
+
+    <string name="service_started">Example Service started</string>
+    <string name="service_label">Example Service Label</string>
+    <string name="increment">Zwiększ o 1</string>
+    <string name="decrement">Zmniejsz o 1</string>
+    <string name="bindToService">Połącz</string>
+    <string name="unbindFromService">Odłącz</string>
+    <string name="startService">Start Service</string>
+    <string name="stopService">Stop Service</string>
+
+
+    <string name="binding">Podłączanie</string>
+    <string name="attached">Podłączono</string>
+    <string name="ubinding">Odłączanie</string>
+    <string name="unbound">Odłączono</string>
+    <string name="unattached">Niepodłączono</string>
+    <string name="intOutput">Wynik : 0</string>
+    <string name="opNotChosen">Nie wybrano operacji</string>
+    <string name="win2Text">Okno 2</string>
+    <string name="win3Text">Okno 3</string>
+    <string name="win4Text">Okno 4</string>
+    <string name="win5Text">Okno 5</string>
+    <string name="win6Text">Okno 6</string>
+
 </resources>
