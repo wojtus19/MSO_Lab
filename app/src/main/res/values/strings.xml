@@ -39,5 +39,13 @@
     <string name="changed_text_descr">"Tekst zmieniony: "</string>
     <string name="original_text_descr">"Tekst oryginalny: "</string>
     <string name="change">Zmień</string>
+    <string name="enterText">Wpisz tekst</string>
+    <string name="addNumberHint">Wpisz liczbę</string>
+    <string name="add">Dodaj</string>
+    <string name="notSortedDescr">"Tablica nieposortowana: "</string>
+    <string name="SortedDescr">Tablica posortowana</string>
+    <string name="notSortedArray" />
+    <string name="sortedArray" />
+    <string name="sort">Sortuj</string>
 
 </resources>

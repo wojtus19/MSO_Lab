@@ -9,16 +9,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import java.util.ArrayList;
 
 public class Window6 extends AppCompatActivity {
 
-    Button win3Btn, win4Btn, win5Btn, win2Btn, changeTextBtn;
-    TextView textFromC;
+    Button win3Btn, win4Btn, win5Btn, win2Btn, changeTextBtn, addBtn, sortBtn;
+    TextView textFromC, notSortedArrayTextView, sortedArrayTextView;
+    EditText addNumberText;
     EditText originalText;
     TextView textToChange;
+    int[] sortedNumbers;
+    ArrayList<Integer> numbersToSort = new ArrayList<Integer>();
+    boolean firsttoAdd = true;
 
+    // MSO_Lab\jni
     public native String toUpperCase(String textToChange, int n);
+    public native int[] Sort(int[] arr);
 
     static {
         System.loadLibrary("lab6");
@@ -80,9 +86,61 @@ public class Window6 extends AppCompatActivity {
             }
         });
 
+        addBtn = (Button) findViewById(R.id.addNumberButton);
+        sortBtn = (Button) findViewById(R.id.sortButton);
+        addNumberText = (EditText) findViewById(R.id.addNumber);
+        notSortedArrayTextView = (TextView) findViewById((R.id.notSortedArray));
+        sortedArrayTextView = (TextView) findViewById((R.id.sortedArray));
+
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (addNumberText.getText() != null && !addNumberText.getText().toString().isEmpty());
+                    String val = addNumberText.getText().toString();
+                    int intVal = Integer.parseInt(val);
+                    numbersToSort.add(intVal);
+                    if(firsttoAdd){
+                        notSortedArrayTextView.setText(val);
+                        firsttoAdd = false;
+                    } else {
+                        notSortedArrayTextView.setText(notSortedArrayTextView.getText().toString() + ", " + val);
+                    }
+            }
+        });
+
+        sortBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!numbersToSort.isEmpty()){
+                    int[] convertedNumbers = convertIntegerToInt(numbersToSort);
+                   sortedNumbers = Sort(convertedNumbers);
+                   String sortedText = "";
+                   for(int i = 0; i < sortedNumbers.length; i++){
+                       if (i == 0){
+                           sortedText += String.valueOf(sortedNumbers[i]);
+                       } else {
+                           sortedText += ", " + String.valueOf(sortedNumbers[i]);
+                       }
+                   }
+                   sortedArrayTextView.setText(sortedText);
+                   numbersToSort.clear();
+                }
+            }
+        });
+
 
         //textFromC.setText(toUpperCase("SiemaToJestTest",15));
 
+    }
+
+
+    private int[] convertIntegerToInt(ArrayList<Integer> list){
+            int[] ret = new int[list.size()];
+            for (int i =0;i<ret.length;i++){
+                ret[i] = list.get(i);
+            }
+            return ret;
     }
 
     public void onBackPressed() {

@@ -114,11 +114,83 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="404dp"
         android:ems="10"
-        android:hint="Wpisz tekst"
+        android:hint="@string/enterText"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/addNumber"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="184dp"
+        android:ems="10"
+        android:hint="@string/addNumberHint"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/addNumberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/add"
+        app:layout_constraintStart_toEndOf="@+id/addNumber"
+        app:layout_constraintTop_toTopOf="@+id/addNumber" />
+
+    <TextView
+        android:id="@+id/notSortedArrayDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/notSortedDescr"
+        app:layout_constraintStart_toStartOf="@+id/addNumber"
+        app:layout_constraintTop_toBottomOf="@+id/addNumber" />
+
+    <TextView
+        android:id="@+id/SortedArrayDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/SortedDescr"
+        app:layout_constraintStart_toStartOf="@+id/notSortedArrayDescr"
+        app:layout_constraintTop_toBottomOf="@+id/notSortedArrayDescr" />
+
+    <TextView
+        android:id="@+id/notSortedArray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notSortedArray"
+        app:layout_constraintStart_toStartOf="@+id/sortedArray"
+        app:layout_constraintTop_toTopOf="@+id/notSortedArrayDescr" />
+
+    <TextView
+        android:id="@+id/sortedArray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/sortedArray"
+        app:layout_constraintStart_toEndOf="@+id/SortedArrayDescr"
+        app:layout_constraintTop_toBottomOf="@+id/notSortedArray" />
+
+    <Button
+        android:id="@+id/sortButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/sort"
+        app:layout_constraintStart_toEndOf="@+id/addNumberButton"
+        app:layout_constraintTop_toTopOf="@+id/addNumberButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
