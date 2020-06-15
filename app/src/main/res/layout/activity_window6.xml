@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Window6">
- 
+
 
     <TextView
         android:id="@+id/win6Text"
@@ -52,6 +52,71 @@
         android:text="@string/Window2Button"
         app:layout_constraintEnd_toStartOf="@+id/win3Button"
         app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_from_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/changedText"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/text_to_change"
+        app:layout_constraintTop_toTopOf="@+id/changed_text_descr" />
+
+    <TextView
+        android:id="@+id/changed_text_descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/changed_text_descr"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/original_text_descr"
+        app:layout_constraintTop_toBottomOf="@+id/original_text_descr" />
+
+    <TextView
+        android:id="@+id/text_to_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="@string/changedText"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/original_text_descr"
+        app:layout_constraintTop_toTopOf="@+id/original_text_descr" />
+
+    <TextView
+        android:id="@+id/original_text_descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/original_text_descr"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/original_text"
+        app:layout_constraintTop_toBottomOf="@+id/original_text" />
+
+    <Button
+        android:id="@+id/changed_text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/change"
+        app:layout_constraintStart_toEndOf="@+id/original_text"
+        app:layout_constraintTop_toTopOf="@+id/original_text" />
+
+    <EditText
+        android:id="@+id/original_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="404dp"
+        android:ems="10"
+        android:hint="Wpisz tekst"
+        android:inputType="textPersonName"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -6,19 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
 public class Window6 extends AppCompatActivity {
 
-    Button win3Btn, win4Btn, win5Btn, win2Btn, changeTextBtn;
+    Button win3Btn, win4Btn, win5Btn, win2Btn;
     TextView textFromC;
-    EditText originalText;
-    TextView textToChange;
 
-    public native String toUpperCase(String textToChange, int n);
+    public native String helloWorld();
 
     static {
         System.loadLibrary("lab6");
@@ -66,22 +63,8 @@ public class Window6 extends AppCompatActivity {
             }
         });
 
-        originalText = (EditText) findViewById(R.id.original_text);
         textFromC = (TextView) findViewById(R.id.text_from_c);
-        textToChange = (TextView) findViewById(R.id.text_to_change);
-
-        changeTextBtn = (Button)findViewById(R.id.changed_text_button);
-        changeTextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (originalText.getText() != null && !originalText.getText().toString().isEmpty());
-                        textToChange.setText(originalText.getText().toString());
-                        textFromC.setText(toUpperCase(originalText.getText().toString(), originalText.getText().toString().length()));
-            }
-        });
-
-
-        //textFromC.setText(toUpperCase("SiemaToJestTest",15));
+        textFromC.setText(helloWorld());
 
     }
 

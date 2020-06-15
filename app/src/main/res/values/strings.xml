@@ -35,5 +35,9 @@
     <string name="win4Text">Okno 4</string>
     <string name="win5Text">Okno 5</string>
     <string name="win6Text">Okno 6</string>
+    <string name="changedText" />
+    <string name="changed_text_descr">"Tekst zmieniony: "</string>
+    <string name="original_text_descr">"Tekst oryginalny: "</string>
+    <string name="change">Zmień</string>
 
 </resources>
